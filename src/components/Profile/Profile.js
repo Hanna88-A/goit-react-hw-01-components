@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import defaultImage from './default.png';
 
 const Profile = ({avatar = defaultImage, username, tag, location, stats: {followers, views, likes}}) => {
@@ -30,6 +31,16 @@ const Profile = ({avatar = defaultImage, username, tag, location, stats: {follow
       </ul>
     </div>
   );
+};
+
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
 };
 
 export default Profile;
