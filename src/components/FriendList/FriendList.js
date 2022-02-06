@@ -2,8 +2,9 @@ import FriendListItem from "../FriendListItem/FriendListItem";
 
 const FriendList = ({ friends }) => {
     return <ul class="friend-list">
-        {friends.map(({avatar, name, isOnline}) => (
+        {friends.map(({avatar, name, isOnline, id}) => (
             <FriendListItem
+                key={id}
                 avatar={avatar}
                 name={name}
                 isOnline={isOnline}
